@@ -2,35 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<scr>, initial-scale=1.0">
-    <title>funcniones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>labo13</title>
 </head>
 <body>
-    <script> 
-//funcion simple 
-function suludo(){
-    console.log ("hola como estas bienvenido")
-    document.write("Hola como estas bienvenido a mi pagina !!")
-}
+    <script>
+        function sumar(a,b){
+            return a+b;
+        }
+        function restar(a,b){
+            return a-b;
+        }
+        function multiplicacion(a,b){
+            return a*b;
+        }
+        function divicion(a,b){
+            return a/b; 
+        }
+        function calculadora(n1,n2,operacion){
+         switch(operacion){
+         case 'sumar':
+            return sumar (n1,n2);
+         case 'restar':
+            return restar (n1,n2);
+         case 'multiplicar':
+            return multiplicacion (n1,n2);
+         case 'divicion':
+            return divicion (n1,n2);
+            default:
+                return "operecion no valida"
+        }
+    }
+        let numero1=parseFloat(prompt("ingrese el primer numero "));
+        let numero2=parseFloat(prompt("ingrese segundo numero"));
+        let operacion=prompt("Ingrese la operacion(sumar,restar,multipli, divi)");
 
-suludo();
-function sumar(a,d){
-    return a + d;
-}
-let resultado=sumar(8,5);
-document.write("la suma es : "+resultado);
+        let resultado=calculadora(numero1,numero2,operacion);
+        console.log("el resultado es: "+resultado);
+        document.write("el resultado es: "+resultado);
 
-function par(numero){
-    if(numero % 2==0){
-        return true;
-    }else
-    return false
-}
-let numero=10;
-let esnumeropar=par(numero);
-document.write("Es "+numero+ " par?" + esnumeropar);
-console.log("es "+numero+ "par? "+esnumeropar)
-
-</script>
+    </script>
 </body>
 </html>
